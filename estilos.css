@@ -37,9 +37,7 @@ nav {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;     /* ✔️ Si no entra, salta abajo */
-  justify-content: center;  /* ✔️ Centra horizontal */
-  gap: 20px;           /* ✔️ Un poco más chico en mobile */
+  gap: 30px;
 }
 
 .menu li a {
@@ -111,7 +109,8 @@ table {
   width: 90%;
   margin: 20px auto;
   border-collapse: collapse;
-  border-radius: 10px; 
+  overflow: hidden;
+  border-radius: 10px; /* Bordes suaves */
 }
 
 
@@ -137,8 +136,7 @@ tr:nth-child(even) {
 /* Efecto hover en imágenes */
 img {
   display: block;
-  max-width: 100%;   /* ✔️ Se adapta full a contenedor */
-  height: auto;      /* ✔️ Mantiene proporción */
+  max-width: 90%;
   margin: 0 auto;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -230,36 +228,4 @@ footer {
 footer p::after {
   content: " – Made with ❤️";
   color: #dd0a19;
-}
-/* 📱 Responsive: general */
-@media (max-width: 768px) {
-  .menu {
-    flex-wrap: wrap;
-    gap: 15px; /* Más compacto en celus */
-  }
-
-  section[id] {
-    padding: 0 10px;
-  }
-
-  footer {
-    padding: 0 10px;
-  }
-
-  table {
-    display: block;
-    overflow-x: auto;
-  }
-
-  .redes a {
-    font-size: 0.95rem;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
 }
