@@ -108,9 +108,7 @@ nav {
 
 /* Tablas con bordes redondeados */
 table {
-  display: block;      /* ✔️ Pone scroll horizontal si es necesario */
-  overflow-x: auto;    /* ✔️ Activa scroll horizontal */
-  width: 100%;         /* ✔️ Ocupar 100% en mobile */
+  width: 90%;
   margin: 20px auto;
   border-collapse: collapse;
   border-radius: 10px; 
