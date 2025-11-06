@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos y Precios - Tinas Bake</title>
+  <link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+<body>
+  <header>
+    <center>
+      <img src="../img/logo-tinas.jpeg" width="300" alt="Tinas Bake Logo" class="logo-principal">
+    </center>
+  </header>
+  <nav>
+    <ul class="menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos y Precios</a></li>
+      <li><a href="puntos-de-venta.html">Puntos de venta</a></li>
+      <li><a href="sobre-mi.html">Sobre mí</a></li>
+      <li><a href="vende-nuestros-productos.html">Vendé nuestros productos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- SECCIÓN PRECIO -->
+  <section id="productos">
+    <h2>Nuestros productos</h2>
+    <br>
+    <ul>
+      <li><a href="#cookies"><strong>Cookies</strong></a></li>
+      <li><a href="#budines"><strong>Budines</strong></a></li>
+      <li><a href="#brownies"><strong>Brownies</strong></a></li>
+      <li><a href="#alfajores"><strong>Alfajores</strong></a></li>
+      <li><a href="#scones-de-queso"><strong>Scones de queso</strong></a></li>
+      <li><a href="#box"><strong>Box desayuno</strong></a></li>
+    </ul>
+  </section>
+
+  <!-- COOKIES -->
+  <section id="cookies">
+    <h2>Cookies</h2>
+
+    <!-- Nuevo Selector de Cantidad de Cookies -->
+ <div class="cookie-summary">
+      <h3>Tu Pedido de Cookies</h3>
+      <p>Total de Cookies: <strong id="cookie-total-count">0</strong></p>
+      <div class="precio-total-cookies">
+        <h3>Precio Total: $<span id="cookie-total-price">0</span></h3>
+      </div>
+    </div>
+    
+    <!-- Contenedor para las tarjetas de cookies -->
+    <div class="catalogo-productos" id="cookie-options-container">
+      
+      <!-- Cookie Vainilla con Chips -->
+      <div class="producto-card cookie-card" data-cookie-id="vainilla-chips">
+        <img src="../img/cookie-vainilla-chips.jpeg" alt="Cookie de Vainilla con chips de chocolate">
+        <div class="producto-info">
+          <h3>Vainilla con Chips</h3>
+          <p>La clásica galleta de vainilla, cargada de trocitos de chocolate que se derriten en tu boca.</p>
+          <div class="cookie-quantity-controls">
+            <button class="btn-remove">-</button>
+            <span class="cookie-quantity">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cookie Vainilla con Oreo -->
+      <div class="producto-card cookie-card" data-cookie-id="vainilla-oreo">
+        <img src="../img/cookie-vainilla-oreo.jpeg" alt="Cookie de Vainilla con Oreo">
+        <div class="producto-info">
+          <h3>Vainilla con Oreo</h3>
+          <p>Una combinación irresistible de masa de vainilla y trozos de la famosa galleta Oreo.</p>
+          <div class="cookie-quantity-controls">
+            <button class="btn-remove">-</button>
+            <span class="cookie-quantity">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cookie Vainilla con Nueces -->
+      <div class="producto-card cookie-card" data-cookie-id="vainilla-nueces">
+        <img src="../img/cookie-vainilla-nueces.jpeg" alt="Cookie de Vainilla con Nueces">
+        <div class="producto-info">
+          <h3>Vainilla con Nueces</h3>
+          <p>Masa de vainilla suave con el toque crujiente y el sabor inconfundible de las nueces frescas.</p>
+          <div class="cookie-quantity-controls">
+            <button class="btn-remove">-</button>
+            <span class="cookie-quantity">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cookie Chocolate con Chips -->
+      <div class="producto-card cookie-card" data-cookie-id="chocolate-chips">
+        <img src="../img/cookie-chocolate-chips.jpeg" alt="Cookie de Chocolate con chips de chocolate">
+        <div class="producto-info">
+          <h3>Chocolate con Chips</h3>
+          <p>Puro placer para los fanáticos del chocolate, con una base de cacao intenso y más chocolate.</p>
+          <div class="cookie-quantity-controls">
+            <button class="btn-remove">-</button>
+            <span class="cookie-quantity">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cookie Chocolate con Chips Blancos -->
+      <div class="producto-card cookie-card" data-cookie-id="chocolate-blanco">
+        <img src="../img/cookie-chocolate-blanco.jpeg" alt="Cookie de Chocolate con chips blancos">
+        <div class="producto-info">
+          <h3>Chocolate con Chips Blancos</h3>
+          <p>El equilibrio perfecto entre el amargor del cacao y la dulzura cremosa del chocolate blanco.</p>
+          <div class="cookie-quantity-controls">
+            <button class="btn-remove">-</button>
+            <span class="cookie-quantity">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cookie Chocolate con Oreo -->
+      <div class="producto-card cookie-card" data-cookie-id="chocolate-oreo">
+        <img src="../img/cookie-chocolate-oreo.jpeg" alt="Cookie de Chocolate con Oreo">
+        <div class="producto-info">
+          <h3>Chocolate con Oreo</h3>
+          <p>Intensa base de chocolate combinada con trozos de galleta Oreo para una doble dosis de sabor.</p>
+          <div class="cookie-quantity-controls">
+            <button class="btn-remove">-</button>
+            <span class="cookie-quantity">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cookie Chocolate con Nueces -->
+      <div class="producto-card cookie-card" data-cookie-id="chocolate-nueces">
+        <img src="../img/cookie-chocolate-nueces.jpeg" alt="Cookie de Chocolate con Nueces">
+        <div class="producto-info">
+          <h3>Chocolate con Nueces</h3>
+          <p>La combinación perfecta de chocolate profundo y el sabor tostado y crujiente de las nueces.</p>
+          <div class="cookie-quantity-controls">
+            <button class="btn-remove">-</button>
+            <span class="cookie-quantity">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cookie Red Velvet -->
+      <div class="producto-card cookie-card" data-cookie-id="red-velvet">
+        <img src="../img/cookie-red-velvet.jpeg" alt="Cookie Red Velvet con chips de chocolate blanco">
+        <div class="producto-info">
+          <h3>Red Velvet</h3>
+          <p>Inspirada en el famoso pastel, con su característico sabor y color, y chips de chocolate blanco.</p>
+          <div class="cookie-quantity-controls">
+            <button class="btn-remove">-</button>
+            <span class="cookie-quantity">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDINES -->
+ <section id="budines">
+    <h2>Budines Clásicos</h2>
+    <div class="catalogo-productos">
+
+      <!-- Budín Vainilla -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-vainilla.jpg" alt="Budín de Vainilla">
+        <div class="producto-info">
+          <h3>Budín de Vainilla</h3>
+          <p>Suave y esponjoso, con el aroma clásico de la vainilla.</p>
+          <label for="size-vainilla">Tamaño:</label>
+          <select class="budin-size" id="size-vainilla">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+
+      <!-- Budín Chocolate -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-chocolate.jpg" alt="Budín de Chocolate">
+        <div class="producto-info">
+          <h3>Budín de Chocolate</h3>
+          <p>Intenso sabor a cacao, una delicia para los chocoadictos.</p>
+          <label for="size-chocolate">Tamaño:</label>
+          <select class="budin-size" id="size-chocolate">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+
+      <!-- Budín Limón y Amapolas -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-limon-amapolas.jpg" alt="Budín de Limón y Amapolas">
+        <div class="producto-info">
+          <h3>Budín Limón y Amapolas</h3>
+          <p>Frescura cítrica y un toque exótico de amapolas.</p>
+          <label for="size-limon-amapolas">Tamaño:</label>
+          <select class="budin-size" id="size-limon-amapolas">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+
+      <!-- Budín Naranja -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-naranja.jpg" alt="Budín de Naranja">
+        <div class="producto-info">
+          <h3>Budín de Naranja</h3>
+          <p>Un sabor vibrante y dulce, perfecto para cualquier momento del día.</p>
+          <label for="size-naranja">Tamaño:</label>
+          <select class="budin-size" id="size-naranja">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+
+      <!-- Budín Marmolado -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-marmolado.jpg" alt="Budín Marmolado">
+        <div class="producto-info">
+          <h3>Budín Marmolado</h3>
+          <p>La combinación perfecta de vainilla y chocolate en un budín suave y delicioso.</p>
+          <label for="size-marmolado">Tamaño:</label>
+          <select class="budin-size" id="size-marmolado">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+
+      <!-- Budín Banana -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-banana.jpg" alt="Budín de Banana">
+        <div class="producto-info">
+          <h3>Budín de Banana</h3>
+          <p>Dulce y húmedo, con el sabor natural de las bananas maduras.</p>
+          <label for="size-banana">Tamaño:</label>
+          <select class="budin-size" id="size-banana">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+
+      <!-- Budín Coco -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-coco.jpg" alt="Budín de Coco">
+        <div class="producto-info">
+          <h3>Budín de Coco</h3>
+          <p>Exótico y aromático, con la dulzura natural del coco rallado.</p>
+          <label for="size-coco">Tamaño:</label>
+          <select class="budin-size" id="size-coco">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Budines Saludables</h2>
+    <div class="catalogo-productos">
+
+      <!-- Budín Banana y Avena -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-banana-avena.jpg" alt="Budín de Banana y Avena">
+        <div class="producto-info">
+          <h3>Budín Banana y Avena</h3>
+          <p>Una opción nutritiva y deliciosa, con la dulzura natural de la banana y la fibra de la avena.</p>
+          <label for="size-banana-avena">Tamaño:</label>
+          <select class="budin-size" id="size-banana-avena">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+
+      <!-- Budín Carrot Cake -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-carrot-cake.jpg" alt="Budín Carrot Cake">
+        <div class="producto-info">
+          <h3>Budín Carrot Cake</h3>
+          <p>Con zanahoria, especias y un toque de crema, una opción rica y diferente.</p>
+          <label for="size-carrot-cake">Tamaño:</label>
+          <select class="budin-size" id="size-carrot-cake">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+
+      <!-- Budín Limón Integral -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-limon-integral.jpg" alt="Budín de Limón Integral">
+        <div class="producto-info">
+          <h3>Budín Limón Integral</h3>
+          <p>Ligero y lleno de sabor cítrico, con harina integral para una opción más saludable.</p>
+          <label for="size-limon-integral">Tamaño:</label>
+          <select class="budin-size" id="size-limon-integral">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+
+      <!-- Budín Naranja Integral -->
+      <div class="producto-card budin-card" data-base-price="3000">
+        <img src="../img/budin-naranja-integral.jpg" alt="Budín de Naranja Integral">
+        <div class="producto-info">
+          <h3>Budín Naranja Integral</h3>
+          <p>Un budín aromático con el dulzor de la naranja y beneficios de la harina integral.</p>
+          <label for="size-naranja-integral">Tamaño:</label>
+          <select class="budin-size" id="size-naranja-integral">
+            <option value="400" data-price="3000">400 gr</option>
+            <option value="800" data-price="4800">800 gr</option>
+          </select>
+          <label>Toppings (opcional):</label>
+          <div class="budin-toppings">
+            <input type="checkbox" data-topping-price="600" value="chips"> Chips de Chocolate<br>
+            <input type="checkbox" data-topping-price="600" value="oreos"> Oreos<br>
+            <input type="checkbox" data-topping-price="600" value="nueces"> Nueces<br>
+            <input type="checkbox" data-topping-price="600" value="ganache"> Baño Ganache<br>
+            <input type="checkbox" data-topping-price="600" value="ddl"> Dulce de Leche<br>
+            <input type="checkbox" data-topping-price="500" value="glaseado"> Glaseado<br>
+          </div>
+          <p class="precio">Precio: $<span class="calculated-price">3000</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- OTROS -->
+  <section id="alfajores">
+    <h2>Alfajores</h2>
+    <table>
+      <thead>
+        <tr><th>Sabor</th><th>1 unidad</th><th>1/2 docena</th><th>Docena</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Vainilla</td><td>$800</td><td>$4500</td><td>$7800</td></tr>
+        <tr><td>Chocolate</td><td>$800</td><td>$4500</td><td>$7800</td></tr>
+        <tr><td>Maicena</td><td>$700</td><td>$3900</td><td>$6900</td></tr>
+      </tbody>
+    </table>
+    <center>
+      <img src="../img/alfajor.jpeg" width="500"  alt="Alfajor de vainilla con dulce de leche">
+    </center> 
+  </section>
+
+  <section id="brownies">
+    <h2>Brownies</h2>
+    <table>
+      <thead><tr><th>Brownie</th><th>Precio</th></tr></thead>
+      <tbody>
+        <tr><td>1 unidad</td><td>$1500</td></tr>
+        <tr><td>4 unidades</td><td>$5000</td></tr>
+      </tbody>
+    </table>
+    <center>
+      <img src="../img/brownies.jpeg" width="500"  alt="Brownies de chocolate">
+    </center>
+  </section>
+
+  <section id="scones-de-queso">
+    <h2>Scones de queso</h2>
+    <table>
+      <thead><tr><th>Scones</th><th>Precio</th></tr></thead>
+      <tbody>
+        <tr><td>5 un. (300 gr)</td><td>$3000</td></tr>
+        <tr><td>10 un. (600 gr)</td><td>$5500</td></tr>
+      </tbody>
+    </table>
+    <center>
+      <img src="../img/scones.jpeg" width="500"  alt="Scones de queso">
+      </center> 
+  </section>
+
+  <!-- BOX -->
+  <section id="box">
+    <h2>Box desayuno / merienda</h2>
+    <table>
+      <thead><tr><th>Box</th><th>Contenido</th><th>Precio</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Box N°1</strong></td>
+          <td>
+            <ul>
+              <li><strong>1 budín</strong> 200 gr + topping</li>
+              <li><strong>2 cookies</strong></li>
+              <li><strong>3 alfajores</strong> (vainilla, chocolate, maicena)</li>
+              <li><strong>2</strong> miniporciones de <strong>brownie</strong></li>
+              <li><strong>2 scones de queso</strong></li>
+            </ul>
+          </td>
+          <td>$7800</td>
+        </tr>
+        <tr>
+          <td><strong>Box N°2</strong></td>
+          <td>
+            <ul>
+              <li><strong>1 budín</strong>  200 gr + topping</li>
+              <li><strong>5 cookies</strong> </li>
+              <li><strong>4 alfajores </strong> (1 vainilla, 1 chocolate, 2 maicena)</li>
+              <li><strong>2 </strong> porciones de <strong>brownie</strong> </li>
+            </ul>
+          </td>
+          <td>$10800</td>
+        </tr>
+        <tr>
+          <td colspan="3"><strong><em>Extra opcional para Box N°2:</em></strong> 5 scones de queso (300 gr) por <strong>$2500</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <center>
+      <img src="../img/box.jpeg" width="500"  alt="Box desayuno con budin cookies scones de queso brownie y alfajores">
+    </center> 
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; 2025 Tinas Bake - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+       // --- LÓGICA PARA LAS COOKIES ---
+  const cookieCart = {}; // Objeto para guardar la cantidad de cada cookie
+  const totalCountEl = document.getElementById('cookie-total-count');
+  const totalPriceEl = document.getElementById('cookie-total-price');
+
+  const PRICE_INDIVIDUAL = 1200;
+  const PRICE_PACK_5 = 5000;
+  const PRICE_PACK_10 = 9000;
+
+  // Función para calcular el precio total con descuentos
+  function calculateTotalPrice(totalCookies) {
+    if (totalCookies === 0) return 0;
+
+    let packsOfTen = Math.floor(totalCookies / 10);
+    let remainingAfterTens = totalCookies % 10;
+
+    let packsOfFive = Math.floor(remainingAfterTens / 5);
+    let remainingSingles = remainingAfterTens % 5;
+
+    // Lógica especial: si quedan 4 o menos, pero el total era de 5 a 9, el pack de 5 ya se cobró.
+    // Esta lógica es más simple:
+    let total = (packsOfTen * PRICE_PACK_10) + (packsOfFive * PRICE_PACK_5) + (remainingSingles * PRICE_INDIVIDUAL);
+    return total;
+  }
+  
+  // Función central para actualizar la UI
+  function updateCartAndUI() {
+    let totalCookies = 0;
+    // Sumar todas las cookies del carrito
+    for (const cookieId in cookieCart) {
+      totalCookies += cookieCart[cookieId];
+    }
+    
+    const totalPrice = calculateTotalPrice(totalCookies);
+
+    totalCountEl.textContent = totalCookies;
+    totalPriceEl.textContent = totalPrice;
+  }
+
+  // Configurar cada tarjeta de cookie
+  document.querySelectorAll('.cookie-card').forEach(card => {
+    const cookieId = card.dataset.cookieId;
+    cookieCart[cookieId] = 0; // Inicializar cantidad en 0
+
+    const quantityEl = card.querySelector('.cookie-quantity');
+    const btnAdd = card.querySelector('.btn-add');
+    const btnRemove = card.querySelector('.btn-remove');
+
+    btnAdd.addEventListener('click', () => {
+      cookieCart[cookieId]++;
+      quantityEl.textContent = cookieCart[cookieId];
+      updateCartAndUI();
+    });
+
+    btnRemove.addEventListener('click', () => {
+      if (cookieCart[cookieId] > 0) {
+        cookieCart[cookieId]--;
+        quantityEl.textContent = cookieCart[cookieId];
+        updateCartAndUI();
+      }
+    });
+  });
+
+      // Lógica para los BUDINES
+      function updateBudinPrice(budinCard) {
+        const sizeSelect = budinCard.querySelector('.budin-size');
+        const selectedSizeOption = sizeSelect.options[sizeSelect.selectedIndex];
+        let currentPrice = parseFloat(selectedSizeOption.dataset.price);
+
+        const toppingCheckboxes = budinCard.querySelectorAll('.budin-toppings input:checked');
+        toppingCheckboxes.forEach(checkbox => {
+          currentPrice += parseFloat(checkbox.dataset.toppingPrice);
+        });
+
+        budinCard.querySelector('.calculated-price').textContent = currentPrice;
+      }
+
+      document.querySelectorAll('.budin-card').forEach(card => {
+        const inputs = card.querySelectorAll('select, input[type="checkbox"]');
+        inputs.forEach(input => {
+          input.addEventListener('change', () => updateBudinPrice(card));
+        });
+        // Inicializar precio al cargar
+        updateBudinPrice(card);
+      });
+    });
+  </script>
+</body>
+</html>
