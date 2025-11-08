@@ -166,6 +166,28 @@ section[id] {
   padding: 0 20px;
 }
 
+/* --- NUEVO: Contenedor para centrar títulos y precios de sección --- */
+.seccion-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.seccion-header h2 {
+  margin-bottom: 10px;
+}
+
+/* --- NUEVO: Estilo para la información de precios --- */
+.precio-info-seccion {
+  display: inline-block;
+  background-color: #a40404; /* Color bordó oscuro */
+  color: #fef1f4; /* Color de texto claro */
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -227,7 +249,7 @@ html {
   border-radius: 10px;
   margin-bottom: 30px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  position: sticky;
+  position:static;
   top: 80px; /* Ajusta este valor según la altura de tu nav */
   z-index: 900;
 }
@@ -246,49 +268,13 @@ html {
   color: #333;
 }
 
-/* Controles de cantidad en cada tarjeta de cookie */
-.cookie-quantity-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-  gap: 15px;
-}
-
-.cookie-quantity-controls button {
-  background-color: #f89eb6;
-  color: #591500;
-  border: none;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%; /* Botones redondos */
-  font-size: 1.5em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  line-height: 35px; /* Centra el +/- verticalmente */
-}
-
-.cookie-quantity-controls button:hover {
-  background-color: #dd0a19;
-  color: white;
-}
-
-.cookie-quantity {
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #333;
-  min-width: 30px; /* Para que no se mueva al cambiar de 9 a 10 */
-  text-align: center;
-}
-
-
+/* --- ACTUALIZADO: Catálogo de productos con CSS Grid --- */
 .catalogo-productos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 25px;
   padding: 20px 0;
+  justify-content: center; 
 }
 
 .producto-card {
@@ -312,12 +298,32 @@ html {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 4%;
+}
+
+/* --- ESTILO ESPECIAL PARA IMAGENES HORIZONTALES EN TARJETAS GRANDES --- */
+.producto-card-grande.imagen-completa img {
+  height: 300px;
+  object-fit:cover; /* Mantiene la relación de aspecto, cubriendo el espacio */
+  object-position: center;
+  background-color: #f8f8f8; /* Un fondo sutil para las barras */
+  border-radius: 4%; /* Para que el borde se aplique a la imagen también */
 }
 
 .producto-info {
   padding: 20px;
-  text-align: left;
+  text-align: left; /* Mantenemos esto para el texto descriptivo */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Hace que esta sección crezca para ocupar el espacio */
+}
+
+.producto-info h3, .producto-info p {
+  text-align: center; /* Centramos títulos y párrafos */
+}
+
+.producto-info p {
+  flex-grow: 1; /* Empuja los controles de cantidad hacia abajo */
 }
 
 .producto-info h3 {
@@ -332,15 +338,20 @@ html {
   line-height: 1.5;
 }
 
-.producto-info .precio {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #333;
-  text-align: right;
-  margin-top: 15px;
+/* --- RESTAURADO Y MEJORADO: Estilos para las tarjetas de Budines --- */
+.budin-card .producto-info {
+  text-align: left; /* Volvemos a alinear a la izquierda para los formularios */
 }
 
-/* Estilos adicionales para los selectores de budines */
+.budin-card label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #a3472b;
+}
+
 .budin-card select {
   width: 100%;
   padding: 8px;
@@ -352,16 +363,199 @@ html {
 }
 
 .budin-card .budin-toppings {
-  margin-top: 5px;
-  margin-bottom: 15px; /* Espacio antes del precio */
-  padding-left: 5px; /* Pequeño indentado para los checkboxes */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* <-- La magia está aquí */
+  gap: 5px 10px; /* Espacio vertical y horizontal */
+  margin-bottom: 15px;
+  font-size: 0.9em;
 }
 
-.budin-card .budin-toppings label {
-  display: block; /* Cada checkbox en su propia línea */
-  margin-bottom: 5px;
+.budin-card .precio {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.btn-add-budin {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1em;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #f89eb6;
+    color: #591500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-budin:hover {
+    background-color: #dd0a19;
+    color: white;
+}
+
+/* --- Estilos para los controles de cantidad (centrados) --- */
+.quantity-controls {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.quantity-controls .btn-add,
+.quantity-controls .btn-remove {
+  background-color: #f89eb6;
+  color: #591500;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.quantity-controls button:hover {
+  background-color: #dd0a19;
+  color: white;
+}
+
+.quantity {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+  min-width: 30px;
+  text-align: center;
+}
+
+.producto-info .precio-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ---- ESTILOS PARA EL NUEVO CARRITO FLOTANTE ---- */
+
+#carrito-resumen {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1100;
+  border: 2px solid #fcdede;
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#carrito-resumen.oculto {
+  opacity: 0;
+  transform: translateY(100px);
+  pointer-events: none;
+}
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcdede;
+  padding: 10px 15px;
+}
+
+.carrito-header h2 {
+  color: #a3472b;
+  margin: 0;
+  font-size: 1.2em;
+}
+#btn-enviar-pedido {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#btn-enviar-pedido:hover {
+  background-color: #1ebe5d;
+}
+
+#carrito-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.carrito-categoria-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.categoria-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95em;
+  gap: 10px;
+}
+
+.categoria-nombre {
+  flex-grow: 1; /* ¡Esta es la clave! Hace que el nombre ocupe todo el espacio disponible */
+  text-align: left; /* Alinea el texto del nombre a la izquierda */
+}
+
+.categoria-precio {
+  min-width: 70px; /* Crea una columna de ancho fijo para el precio */
+  text-align: right; /* Alinea el texto del precio a la derecha dentro de su columna */
+  font-weight: bold; /* Mantenemos la negrita */
+}
+
+.toggle-detalles {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 2px 6px;
+  margin-left: 10px;
+}
+
+.carrito-detalles {
+  list-style-type: circle;
+  padding-left: 20px;
+  margin-top: 8px;
   font-size: 0.85em;
-  color: #666;
+  color: #555;
+  display: none; /* Oculto por defecto */
+}
+
+.carrito-detalles.visible {
+  display: block; /* Visible cuando se hace clic */
+}
+
+.carrito-total {
+  padding: 15px;
+  text-align: right;
+  font-size: 1.2em;
+  background-color: #f8f9fa;
+  border-top: 2px solid #fcdede;
 }
 
 /* Footer */
@@ -375,4 +569,86 @@ footer {
 footer p::after {
   content: " – Made with ❤️";
   color: #dd0a19;
+}
+
+/* ---- NUEVOS ESTILOS PARA EL LAYOUT DE TARJETAS ---- */
+
+/* 1. Estilo para los espaciadores invisibles */
+.espaciador-grid {
+  /* Esta clase no necesita estilos CSS visibles, solo ocupa un espacio en la grilla */
+  min-height: 1px; /* Para asegurar que ocupe espacio si está vacío */
+}
+
+/* 2. Estilo para las tarjetas grandes */
+.producto-card-grande {
+  grid-column: span 2; /* Hace que la tarjeta ocupe 2 columnas */
+  justify-self: center; /* Centra la tarjeta grande dentro de su espacio */
+  width: calc(2 * (280px + 25px) - 25px); /* Calcula el ancho para que ocupe dos columnas + gap */
+  max-width: 100%; /* Asegura que no se salga del contenedor */
+  margin: 0 auto; /* Centra la tarjeta si el contenedor es más ancho */
+}
+
+/* 3. Ajuste de la imagen para la tarjeta grande */
+.producto-card-grande.imagen-completa img {
+  object-fit: cover; /* Mantiene la relación de aspecto, cubriendo el espacio */
+  object-position: center; /* Centra la imagen dentro del contenedor */
+  border-radius: 4%; /* Ajusta los bordes superiores redondeados */
+}
+
+/* 4. Media Query para que las tarjetas grandes se vean bien en móviles */
+@media (max-width: 650px) { /* Ajusta este valor según sea necesario */
+  .producto-card-grande {
+    grid-column: span 1; /* En pantallas pequeñas, solo ocupan 1 columna */
+    justify-self: stretch; /* Vuelven a ocupar el ancho completo */
+    width: auto; /* Se ajustan al ancho del grid */
+  }
+  .producto-card-grande.imagen-completa img {
+    object-fit: cover; /* Volvemos a 'cover' para que la imagen no quede rara */
+  }
+}
+
+/* --- ESTILOS ADICIONALES PARA CENTRAR LOS CONTROLES DE CANTIDAD --- */
+.producto-info {
+  text-align: center; /* Centra el título, párrafo y controles de cantidad */
+}
+
+.producto-info .quantity-controls {
+  justify-content: center; /* Asegura que los controles estén centrados */
+}
+
+/* --- ESTILOS DE LOS BUDINES (restaurados y ajustados) --- */
+.budin-card .producto-info {
+  text-align: left; /* Los formularios necesitan alineación izquierda */
+}
+
+.budin-card label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #a3472b;
+}
+
+.budin-card select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  font-size: 0.9em;
+}
+
+.budin-card .budin-toppings {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.budin-card .precio {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
 }
