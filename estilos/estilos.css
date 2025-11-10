@@ -322,14 +322,13 @@ html {
   text-align: center; /* Centramos títulos y párrafos */
 }
 
-.producto-info p {
-  flex-grow: 1; /* Empuja los controles de cantidad hacia abajo */
-}
 
 .producto-info h3 {
   margin-top: 0;
   color: #a3472b;
   font-size: 1.25em;
+  text-align: center;
+  width: 100%;
 }
 
 .producto-info p {
@@ -338,9 +337,11 @@ html {
   line-height: 1.5;
 }
 
-/* --- RESTAURADO Y MEJORADO: Estilos para las tarjetas de Budines --- */
 .budin-card .producto-info {
-  text-align: left; /* Volvemos a alinear a la izquierda para los formularios */
+  text-align: left; 
+  padding-bottom: 10px;
+  flex-grow: 1;
+  align-items: flex-start;
 }
 
 .budin-card label {
@@ -366,7 +367,7 @@ html {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* <-- La magia está aquí */
   gap: 5px 10px; /* Espacio vertical y horizontal */
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 0.9em;
 }
 
@@ -375,7 +376,9 @@ html {
   font-size: 1.2em;
   font-weight: bold;
   color: #333;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .btn-add-budin {
@@ -383,7 +386,6 @@ html {
     border-radius: 8px;
     font-size: 1em;
     padding: 10px 15px;
-    margin-top: 10px;
     background-color: #f89eb6;
     color: #591500;
     border: none;
