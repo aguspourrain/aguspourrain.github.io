@@ -198,7 +198,7 @@ const carritoResumenEl = document.getElementById('carrito-resumen');
   // --- LÓGICA PARA ENVIAR PEDIDO A WHATSAPP ---
   btnEnviarPedido.addEventListener('click', () => {
 
-    alert("Estas a punto de hacer tu pedido! al continuar, vas a poder terminar de efectuar el pago y coordinar momento de entrega :) gracias ❤️");
+    //alert("Estas a punto de hacer tu pedido! al continuar, vas a poder terminar de efectuar el pago y coordinar momento de entrega :) gracias ❤️");
 
     let mensaje = '¡Hola Tinas Bake! Quisiera hacer el siguiente pedido:\n\n';
     

@@ -242,6 +242,58 @@ html {
   background-color: #c0255b;
 }
 
+/* --- BOTONES FLOTANTES DE REDES --- */
+
+.botones-flotantes {
+  position: fixed; /* <-- La magia que los hace flotar */
+  bottom: 25px;
+  left: 25px; /* <-- A la izquierda, como pediste */
+  z-index: 1050; /* Alto, para que esté sobre el contenido */
+  display: flex;
+  flex-direction: column; /* Uno arriba del otro */
+  gap: 12px; /* Espacio entre botones */
+}
+
+.btn-flotante-wsp,
+.btn-flotante-ig {
+  width: 70px; /* Ancho */
+  height: 70px; /* Alto (para que sea cuadrado) */
+  border-radius: 12px; /* <-- Bordes levemente redondeados */
+  color: #ffffff;
+  
+  /* Para centrar el icono adentro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+/* Efecto al pasar el mouse */
+.btn-flotante-wsp:hover,
+.btn-flotante-ig:hover {
+  transform: scale(1.1);
+}
+
+/* Colores de marca */
+/*.btn-flotante-wsp {
+  background-color: #000000c2;
+}
+.btn-flotante-ig {
+  background-color: #000000c2;
+}*/
+
+.btn-flotante-wsp img {
+  width:100%;
+  height: 100%;
+}
+
+.btn-flotante-ig img {
+  width: 80%;
+  height: 80%;
+}
+
 
 /* --- Botón CTA (Call to Action) --- */
 .btn-cta {
@@ -324,7 +376,7 @@ html {
   flex-wrap: wrap; /* Para que en celu se ponga uno abajo del otro */
   gap: 30px;
   align-items: flex-start; 
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 
 .sobre-mi-texto {
@@ -335,11 +387,11 @@ html {
 
 .sobre-mi-foto {
   flex: 1; /* Que la foto ocupe 1/3 */
-  min-width: 250px;
+  min-width: 200px;
 }
 
 .sobre-mi-foto img {
-  width: 100%;
+  width: 90%;
   max-width: 100%; /* Asegura que la imagen no se pase */
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -483,6 +535,60 @@ html {
   border-radius: 10px;
   margin-top: 20px;
   margin-left: 60px;
+}
+
+#como-comprar {
+  background-color: #ffdcea; /* O usa #fef1f4 si te gusta más */
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin-top: 0px;
+  margin-bottom: 5%;
+  
+  /* El margin y max-width ya lo tiene section[id] */
+}
+
+#como-comprar .seccion-header h3 {
+  color: #a3472b;
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.pasos-grid {
+  display: grid;
+  /* Se adapta a 3 columnas en PC y 1 en celu */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.paso-item {
+  text-align: center;
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.paso-icono {
+  font-size: 2.5em; /* Iconos grandes */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.paso-item h4 {
+  color: #a3472b;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.15em;
+}
+
+.paso-item p {
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 0; /* Resetea el padding de .producto-info p */
+  flex-grow: 0; /* Resetea el flex-grow */
 }
 /* ---- ESTILOS ADICIONALES PARA SECCIÓN DE COOKIES ---- */
 
