@@ -244,7 +244,7 @@ html {
 /* --- Botón CTA (Call to Action) --- */
 .btn-cta {
   display: inline-block;
-  background-color: #f990ac; /* Tu color bordó */
+  background-color:#a40404;  /* Tu color bordó */
   color: white;
   padding: 15px 30px;
   font-size: 1.2em;
@@ -255,7 +255,7 @@ html {
 }
 
 .btn-cta:hover {
-  background-color: #a40404; /* Un bordó más oscuro */
+  background-color: #840021; /* Un bordó más oscuro */
   transform: scale(1.05);
 }
 
@@ -278,6 +278,42 @@ html {
 .btn-ver-mas:hover {
   background-color: #dd0a19;
   color: white;
+}
+
+.punto-venta-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden; /* Para que el mapa respete los bordes */
+  margin-bottom: 40px;
+}
+
+.punto-venta-info {
+  padding: 25px;
+}
+.punto-venta-info h3 {
+  margin-top: 0;
+  color: #a3472b;
+}
+
+/* El mapa no necesita padding */
+.punto-venta-mapa {
+  line-height: 0; /* Quita espacios raros del iframe */
+}
+
+/* Estilos para el CTA de 'Vende nuestros productos' */
+.cta-vende {
+  text-align: center;
+  background-color: #ffdcea; /* Un fondo rosa pálido */
+  padding: 30px;
+  border-radius: 15px;
+}
+.cta-vende h3 {
+  color: #a3472b;
+  margin-top: 0;
+}
+.cta-vende .btn-cta {
+  margin-top: 20px; /* Ajusta el margen del botón que ya creamos */
 }
 /* ---- ESTILOS ADICIONALES PARA SECCIÓN DE COOKIES ---- */
 
