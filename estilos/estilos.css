@@ -239,6 +239,46 @@ html {
 .btn-ig:hover {
   background-color: #c0255b;
 }
+
+
+/* --- Botón CTA (Call to Action) --- */
+.btn-cta {
+  display: inline-block;
+  background-color: #f990ac; /* Tu color bordó */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #a40404; /* Un bordó más oscuro */
+  transform: scale(1.05);
+}
+
+.btn-ver-mas {
+  width: auto;
+  padding: 10px 20px;
+  margin: 10px auto 0; /* Centra el botón */
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #f89eb6;
+  color: #591500;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  background-color: #dd0a19;
+  color: white;
+}
 /* ---- ESTILOS ADICIONALES PARA SECCIÓN DE COOKIES ---- */
 
 /* Contenedor del resumen del pedido */
@@ -446,6 +486,7 @@ html {
     text-align: center;
     margin-bottom: 15px;
 }
+
 
 /* ---- ESTILOS PARA EL NUEVO CARRITO FLOTANTE ---- */
 
