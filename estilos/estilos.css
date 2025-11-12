@@ -315,6 +315,58 @@ html {
 .cta-vende .btn-cta {
   margin-top: 20px; /* Ajusta el margen del botón que ya creamos */
 }
+
+/* Layout de 2 columnas para Sobre Mí */
+.sobre-mi-layout {
+  display: flex;
+  flex-wrap: wrap; /* Para que en celu se ponga uno abajo del otro */
+  gap: 30px;
+  align-items: center; /* Alinea verticalmente */
+  margin-bottom: 40px;
+}
+
+.sobre-mi-texto {
+  flex: 2; /* Que el texto ocupe 2/3 */
+  min-width: 300px;
+}
+
+.sobre-mi-foto {
+  flex: 1; /* Que la foto ocupe 1/3 */
+  min-width: 250px;
+}
+
+.sobre-mi-foto img {
+  width: 100%;
+  max-width: 100%; /* Asegura que la imagen no se pase */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Estilos para los Valores */
+.valores-marca {
+  text-align: center;
+  margin-top: 50px;
+}
+.valores-marca h3 {
+  color: #a3472b;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.valor-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.valor-item h4 {
+  margin-top: 0;
+}
 /* ---- ESTILOS ADICIONALES PARA SECCIÓN DE COOKIES ---- */
 
 /* Contenedor del resumen del pedido */
