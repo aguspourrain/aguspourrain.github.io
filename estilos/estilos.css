@@ -303,7 +303,7 @@ html {
 
 /* --- ESTILO ESPECIAL PARA IMAGENES HORIZONTALES EN TARJETAS GRANDES --- */
 .producto-card-grande.imagen-completa img {
-  height: 300px;
+  height: 400px;/*aca es para aumentar el tamaño de box, scones, brownies*/
   object-fit:cover; /* Mantiene la relación de aspecto, cubriendo el espacio */
   object-position: center;
   background-color: #f8f8f8; /* Un fondo sutil para las barras */
