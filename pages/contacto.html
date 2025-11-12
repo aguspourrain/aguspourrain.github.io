@@ -23,39 +23,46 @@
     </nav>
 
   <!-- SECCIÓN CONTACTO -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Hacenos tu pedido por redes o completando este formulario:</p>
+<section id="contacto">
+  <h2>Ponete en contacto</h2>
 
-    <form action="https://formspree.io/f/mvgrvvpb" method="POST">
-      <fieldset>
-        <legend><strong>Formulario de contacto</strong></legend>
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="pedido">Tu pedido:</label><br>
-        <textarea id="pedido" name="pedido" rows="5" cols="40" required></textarea><br><br>
+  <p class="form-intro-text">
+    ¿Tenés alguna duda, sugerencia o consulta sobre pedidos especiales?
+    <br>¡Este es tu lugar!
+  </p>
+
+  <form class="form-container" action="https://formspree.io/f/mvgrvvpb" method="POST">
+    <fieldset>
+      <legend>Dejanos tu mensaje</legend>
+      
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="mensaje">Tu mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      
+      <div class="form-buttons-center">
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpiar">
-      </fieldset>
-    </form>
+      </div>
+    </fieldset>
+  </form>
 
-    <p class="redes">
-      <a href="https://wa.me/5492235503672" class="btn-wsp" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 448 512">
-          <path d="M380.9 97.1C339 55.2 283.1 32 224 32 100.3 32 0 132.3 0 256c0 45.2 12 89.4 34.8 128.1L0 480l98.5-34.3C136.6 468 179.9 480 224 480c123.7 0 224-100.3 224-224 0-59.1-23.2-115-67.1-158.9zM224 433.9c-38.7 0-76.6-10.4-109.7-30.1l-7.8-4.6-58.5 20.4 20.4-58.5-4.6-7.8C62.5 320.6 52.1 282.7 52.1 244 52.1 142 122 72.1 224 72.1c54.3 0 105.3 21.1 143.7 59.4S440 189.7 440 244c0 102-69.9 189.9-216 189.9zm100.7-138.5l-34.7-17.4c-4.7-2.3-10.1-1.5-13.8 2l-14.4 14.7c-34.8-17.8-62.7-45.7-80.5-80.5l14.7-14.4c3.5-3.7 4.3-9.1 2-13.8l-17.4-34.7c-3.4-6.7-11.6-9.3-18-5.9l-25.1 12.6c-6.6 3.3-10.7 10.1-10.7 17.3 0 91.7 74.3 166 166 166 7.2 0 14-4.1 17.3-10.7l12.6-25.1c3.4-6.4.8-14.6-5.9-18z"/>
-        </svg>
-        Escribinos por WhatsApp
-      </a>
-      <a href="https://www.instagram.com/tinasbake/" class="btn-ig" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 448 512">
-          <path d="M224.1 141c-63.6 0-115.1 51.5-115.1 115.1S160.5 371.2 224.1 371.2 339.2 319.7 339.2 256 287.7 141 224.1 141zm0 190.2c-41.6 0-75.1-33.6-75.1-75.1s33.5-75.1 75.1-75.1 75.1 33.6 75.1 75.1-33.5 75.1-75.1 75.1zm146.4-194.3c0 14.9-12 27-27 27s-27-12.1-27-27 12-27 27-27 27 12.1 27 27zm76.1 27.2c-.5-35.2-9.9-66.5-35.6-92.1s-56.9-35.1-92.1-35.6C293.8 32 256.3 32 224 32s-69.8 0-94.9.5c-35.2.5-66.5 9.9-92.1 35.6s-35.1 56.9-35.6 92.1C0 186.2 0 223.7 0 256s0 69.8.5 94.9c.5 35.2 9.9 66.5 35.6 92.1s56.9 35.1 92.1 35.6c25.1.5 62.6.5 94.9.5s69.8 0 94.9-.5c35.2-.5 66.5-9.9 92.1-35.6s35.1-56.9 35.6-92.1c.5-25.1.5-62.6.5-94.9s0-69.8-.5-94.9zm-48.6 228c-7.8 19.7-22.9 34.8-42.6 42.6-29.5 11.7-99.5 9-132.3 9s-102.7 2.6-132.3-9c-19.7-7.8-34.8-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.3s-2.6-102.7 9-132.3c7.8-19.7 22.9-34.8 42.6-42.6 29.5-11.7 99.5-9 132.3-9s102.7-2.6 132.3 9c19.7 7.8 34.8 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.3s2.7 102.8-9 132.3z"/>
-        </svg>
-        Seguinos en Instagram
-      </a>
-    </p>
-  </section>
+  <div class="redes" style="max-width: 600px; margin: 30px auto 0;">
+    <p style="text-align: center;">O si preferís, hablános por nuestras redes:</p>
+     <a href="https://wa.me/5492235503672" class="btn-wsp" target="_blank">
+       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.2 283.1 32 224 32 100.3 32 0 132.3 0 256c0 45.2 12 89.4 34.8 128.1L0 480l98.5-34.3C136.6 468 179.9 480 224 480c123.7 0 224-100.3 224-224 0-59.1-23.2-115-67.1-158.9zM224 433.9c-38.7 0-76.6-10.4-109.7-30.1l-7.8-4.6-58.5 20.4 20.4-58.5-4.6-7.8C62.5 320.6 52.1 282.7 52.1 244 52.1 142 122 72.1 224 72.1c54.3 0 105.3 21.1 143.7 59.4S440 189.7 440 244c0 102-69.9 189.9-216 189.9zm100.7-138.5l-34.7-17.4c-4.7-2.3-10.1-1.5-13.8 2l-14.4 14.7c-34.8-17.8-62.7-45.7-80.5-80.5l14.7-14.4c3.5-3.7 4.3-9.1 2-13.8l-17.4-34.7c-3.4-6.7-11.6-9.3-18-5.9l-25.1 12.6c-6.6 3.3-10.7 10.1-10.7 17.3 0 91.7 74.3 166 166 166 7.2 0 14-4.1 17.3-10.7l12.6-25.1c3.4-6.4.8-14.6-5.9-18z"/></svg>
+       Escribinos por WhatsApp
+     </a>
+     <a href="https://www.instagram.com/tinasbake/" class="btn-ig" target="_blank">
+       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-115.1 51.5-115.1 115.1S160.5 371.2 224.1 371.2 339.2 319.7 339.2 256 287.7 141 224.1 141zm0 190.2c-41.6 0-75.1-33.6-75.1-75.1s33.5-75.1 75.1-75.1 75.1 33.6 75.1 75.1-33.5 75.1-75.1 75.1zm146.4-194.3c0 14.9-12 27-27 27s-27-12.1-27-27 12-27 27-27 27 12.1 27 27zm76.1 27.2c-.5-35.2-9.9-66.5-35.6-92.1s-56.9-35.1-92.1-35.6C293.8 32 256.3 32 224 32s-69.8 0-94.9.5c-35.2.5-66.5 9.9-92.1 35.6s-35.1 56.9-35.6 92.1C0 186.2 0 223.7 0 256s0 69.8.5 94.9c.5 35.2 9.9 66.5 35.6 92.1s56.9 35.1 92.1 35.6c25.1.5 62.6.5 94.9.5s69.8 0 94.9-.5c35.2-.5 66.5-9.9 92.1-35.6s35.1-56.9 35.6-92.1c.5-25.1.5-62.6.5-94.9s0-69.8-.5-94.9zm-48.6 228c-7.8 19.7-22.9 34.8-42.6 42.6-29.5 11.7-99.5 9-132.3 9s-102.7 2.6-132.3-9c-19.7-7.8-34.8-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.3s-2.6-102.7 9-132.3c7.8-19.7 22.9-34.8 42.6-42.6 29.5-11.7 99.5-9 132.3-9s102.7-2.6 132.3 9c19.7 7.8 34.8 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.3s2.7 102.8-9 132.3z"/></svg>
+       Seguinos en Instagram
+     </a>
+   </div>
+</section>
 
   <!-- PIE DE PÁGINA -->
   <footer>

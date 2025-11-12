@@ -174,6 +174,7 @@ section[id] {
 
 .seccion-header h2 {
   margin-bottom: 10px;
+  margin-top: 0;
 }
 
 /* --- NUEVO: Estilo para la información de precios --- */
@@ -190,6 +191,7 @@ section[id] {
 
 html {
   scroll-behavior: smooth;
+  text-align: justify;
 }
 
 /* Redes y botones */
@@ -321,13 +323,14 @@ html {
   display: flex;
   flex-wrap: wrap; /* Para que en celu se ponga uno abajo del otro */
   gap: 30px;
-  align-items: center; /* Alinea verticalmente */
+  align-items: flex-start; 
   margin-bottom: 40px;
 }
 
 .sobre-mi-texto {
   flex: 2; /* Que el texto ocupe 2/3 */
   min-width: 300px;
+  text-align: justify;
 }
 
 .sobre-mi-foto {
@@ -366,6 +369,120 @@ html {
 }
 .valor-item h4 {
   margin-top: 0;
+}
+
+/* --- NUEVOS ESTILOS PARA FORMULARIOS --- */
+
+/* Contenedor general del formulario (lo convierte en tarjeta) */
+.form-container {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px;
+  max-width: 600px; /* Centra el form en la página */
+  margin: 20px auto; /* Centra el form en la página */
+  text-align: left;
+}
+
+/* Título dentro del formulario */
+.form-container legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #a3472b; /* Tu color bordó */
+  border: none; /* Oculta el borde feo de fieldset */
+  padding: 0;
+}
+
+/* Oculta el borde feo de fieldset */
+.form-container fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo de las etiquetas (ej. "Nombre:") */
+.form-container label {
+  display: block; /* Hace que ocupe una línea entera */
+  font-weight: 600;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Estilo de las cajas de texto y email */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  width: 100%; /* Ocupa todo el ancho */
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+}
+
+/* Estilo del botón de Enviar (igual que tu .btn-cta) */
+.form-container input[type="submit"] {
+  display: inline-block;
+  background-color: #dd0a19; /* Tu color bordó */
+  color: white;
+  padding: 12px 25px;
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #a40404;
+  transform: scale(1.05);
+}
+
+/* Estilo del botón de Limpiar (para que no llame tanto la atención) */
+.form-container input[type="reset"] {
+  display: inline-block;
+  background-color: #f0f0f0; /* Un gris claro */
+  color: #555;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.form-container input[type="reset"]:hover {
+  background-color: #ddd;
+}
+
+/* Para el párrafo de introducción de la pág de contacto */
+.form-intro-text {
+  text-align: center;
+  max-width: 600px;
+  /* Margen: 0 arriba/abajo, auto izq/der, 30px abajo */
+  margin: 0 auto 30px; 
+}
+
+/* Para centrar los botones de los formularios */
+.form-buttons-center {
+  text-align: center;
+}
+
+/* Para la imagen de promo en la pág "Vende..." */
+.vende-promo-img {
+  width: 63%;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 60px;
 }
 /* ---- ESTILOS ADICIONALES PARA SECCIÓN DE COOKIES ---- */
 
