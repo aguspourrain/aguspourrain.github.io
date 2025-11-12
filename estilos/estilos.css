@@ -590,6 +590,17 @@ html {
   padding: 0; /* Resetea el padding de .producto-info p */
   flex-grow: 0; /* Resetea el flex-grow */
 }
+
+/* --- ESTILOS ADICIONALES PARA PUNTOS DE VENTA --- */
+
+/* Separador visual entre secciones */
+.separador-seccion {
+  border: none;
+  height: 2px;
+  background-color: #fcdede; /* Tu color rosa pálido */
+  margin: 60px auto;
+  width: 80%;
+}
 /* ---- ESTILOS ADICIONALES PARA SECCIÓN DE COOKIES ---- */
 
 /* Contenedor del resumen del pedido */
