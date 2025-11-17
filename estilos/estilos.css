@@ -400,7 +400,7 @@ html {
 /* Estilos para los Valores */
 .valores-marca {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 .valores-marca h3 {
   color: #a3472b;
@@ -666,7 +666,7 @@ html {
 /* --- ESTILO ESPECIAL PARA IMAGENES HORIZONTALES EN TARJETAS GRANDES --- */
 .producto-card-grande.imagen-completa img {
   height: 400px;/*aca es para aumentar el tamaño de box, scones, brownies*/
-  object-fit:cover; /* Mantiene la relación de aspecto, cubriendo el espacio */
+  object-fit: contain; 
   object-position: center;
   background-color: #f8f8f8; /* Un fondo sutil para las barras */
   border-radius: 4%; /* Para que el borde se aplique a la imagen también */
